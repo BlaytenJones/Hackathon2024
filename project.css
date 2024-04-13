@@ -58,3 +58,17 @@ th, td {
     background-color: #7dcfb6;
     font-size: 20px;
 }
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #2CBF93;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #7dcfb6;
+    outline: none;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
