@@ -13,19 +13,16 @@
     <div id="Leaderboard" class="tabcontent">
         <table style="width:100%">
           <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            <th>Username</th>
+            <th>Score</th>
           </tr>
           <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>N1GHTINGAL3</td>
+            <td>600</td>
           </tr>
           <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
+            <td>Bkj011</td>
+            <td>200</td>
           </tr>
         </table>
         <head>
@@ -33,9 +30,8 @@
         </head>
       </div>
   </body>
-</html>
 
-<body>
+  <body>
 
 <div id="Images" class="tabcontent">
     <input class="secretType" onblur="secretInfo(event)" type="text" name="name" />
@@ -44,7 +40,7 @@
 
 
 <script type="module">
-import { createClient } from '../node_modules/@supabase/supabase-js'
+import { createClient } from 'C:/Users/Jordan/Documents/GitHub/node_modules/@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
 const supabase = createClient('https://Hackathon2024.supabase.co', 'r6SabGYJcdpo2ZVJ')
@@ -57,38 +53,34 @@ console.log(data)
 </script>
 
 
-<script>
-
-
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-function secretInfo(event)
-{
-    secret = document.getElementsByClassName("secretType")[0].value;
-    if (secret == 111)
-    {
-        document.getElementsByClassName("hiddenMessage")[0].style="display: inline;";
+    <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
     }
-    else
-    {
-        document.getElementsByClassName("hiddenMessage")[0].style="display: none;";
-    }
-    
-}
-</script>
 
-   
-</body>
+    function secretInfo(event)
+    {
+        secret = document.getElementsByClassName("secretType")[0].value;
+        if (secret == 111)
+        {
+            document.getElementsByClassName("hiddenMessage")[0].style="display: inline;";
+        }
+        else
+        {
+            document.getElementsByClassName("hiddenMessage")[0].style="display: none;";
+        }
+        
+    }
+    </script>  
+  </body>
 </html> 

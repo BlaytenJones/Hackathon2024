@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    font-family: Georgia;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
     background: linear-gradient(90deg, #00b2ca 0%, #1d4e89 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: Georgia;
 }
 
 .tab {
@@ -56,4 +56,5 @@ th, td {
     text-align: center;
     border: 2px solid white;
     background-color: #7dcfb6;
+    font-size: 20px;
 }
