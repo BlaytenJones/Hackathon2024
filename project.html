@@ -11,20 +11,7 @@
     </div>
 
     <div id="Leaderboard" class="tabcontent">
-        <table style="width:100%">
-          <tr>
-            <th>Username</th>
-            <th>Score</th>
-          </tr>
-          <tr>
-            <td>N1GHTINGAL3</td>
-            <td>600</td>
-          </tr>
-          <tr>
-            <td>Bkj011</td>
-            <td>200</td>
-          </tr>
-        </table>
+      <table id="myTable"></table>
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1">
         </head>
@@ -49,6 +36,7 @@ const { data, error } = await supabase
   .select();
   
   console.log(data);
+  generateTable(data);
 </script>
 
 
@@ -80,6 +68,27 @@ const { data, error } = await supabase
         }
         
     }
+
+  function generateTable(data) {
+// Find a <table> element with id="myTable":
+  var table = document.getElementById("myTable");
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+for (i in data)
+{
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = data[i].Username;
+  cell2.innerHTML = data[i].Score;
+}
+var header = table.createTHead();
+  var row = header.insertRow(0);  
+  var usernameHeader = row.insertCell(0);
+  var scoreHeader = row.insertCell(1);
+  usernameHeader.innerHTML = "<b>Username</b>";
+  scoreHeader.innerHTML = "<b>Score</b>";
+console.log("ran")
+}
     </script>  
   </body>
 </html> 
