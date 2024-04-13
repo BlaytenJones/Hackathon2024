@@ -8,12 +8,11 @@ table, th, td {
 
 <body>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        <button class="tablinks" onclick="openCity(event, 'Leaderboard')">Leaderboard</button>
+        <button class="tablinks" onclick="openCity(event, 'Images')">Images</button>
       </div>
 
-<div id="London" class="tabcontent">
+<div id="Leaderboard" class="tabcontent">
     <table style="width:100%">
         <tr>
           <th>Company</th>
@@ -82,14 +81,9 @@ table, th, td {
 <body>
 
 
-<div id="Paris" class="tabcontent">
+<div id="Images" class="tabcontent">
     <input class="secretType" onblur="secretInfo(event)" type="text" name="name" />
     <div class="hiddenMessage" style="display: none;">hello!</div>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
 </div>
 
 <script>
